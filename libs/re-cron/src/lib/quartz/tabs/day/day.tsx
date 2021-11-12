@@ -259,10 +259,10 @@ export class QuartzCronDay extends QuartzTabBaseComponent<CronTabBaseProps> {
 				disabledControls={this.uiServiceApi.isDayOfWeekRangeControlsDisabled()}
 				label1={this.props.localization.quartz.day.dayOfWeekRange.label1}
 				label2={this.props.localization.quartz.day.dayOfWeekRange.label2}
-				primaryOptions={this.daysOfWeekCodes}
+				primaryOptions={this.localizeList(this.daysOfWeekCodes, this.props.localization.common.dayOfWeek)}
 				primaryValue={this.uiServiceApi.getDayOfWeekRangePrimary()}
 				onPrimaryValueChange={this.uiServiceApi.setDayOfWeekRangePrimary}
-				secondaryOptions={this.daysOfWeekCodes}
+				secondaryOptions={this.localizeList(this.daysOfWeekCodes, this.props.localization.common.dayOfWeek)}
 				secondaryValue={this.uiServiceApi.getDayOfWeekRangeSecondary()}
 				onSecondaryValueChange={this.uiServiceApi.setDayOfWeekRangeSecondary}/>
 		);
